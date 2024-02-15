@@ -1,7 +1,7 @@
 # Site settings
 title: Rabbit_TJ Blog
 SEOTitle: 汤键的博客 | Rabbit_TJ Blog
-header-img: https://pic.imgdb.cn/item/65cd96829f345e8d0368eb21.png
+header-img: "https://pic.imgdb.cn/item/65cd96829f345e8d0368eb21.png"
 email: 1820291307@aliyun.com
 description: "All is but a retracing and reconstruction."
 keyword: "兔子队列, Rabbit_TJ Blog, 汤键的博客, 1820291307, 汤键, Apache, Java, Spring"
