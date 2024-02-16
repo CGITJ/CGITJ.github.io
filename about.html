@@ -5,6 +5,12 @@ description: "Hey, this is TJ."
 header-img: "https://pic.imgdb.cn/item/65cf393a9f345e8d0328c200.jpg"
 ---
 
+<!-- Language Selector -->
+<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select> -->
+
 <!-- Chinese Version -->
 <div class="zh post-container">
 
@@ -22,7 +28,113 @@ header-img: "https://pic.imgdb.cn/item/65cf393a9f345e8d0328c200.jpg"
     </ul>
 </div>
 
+<!-- English Version -->
+<!-- <div class="en post-container">
+    <blockquote><p>一个人的世界里，镜子代表反思，而唾手可得的大量资料就是百科全书<br>
+    如果真如此，一个人在资料中从相反的方面里发现一个人，那么，这个人未必是先前没有的，我是指，这个人未必是凭空出现的人</p></blockquote>
+
+    <p>Hi, I am <strong>Jian Tang(兔子队列)</strong>，I am an Java Backend Development Engineer</p>
+
+    <p>工作经历</p>
+
+    <ul>
+        <li>医通宝数据科技（天津）有限公司 Java后端开发 2023年09月 - 2023年12月</li>
+    </ul>
+
+    <h5>Talks</h5>
+
+    <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+    </ul>
+</div> -->
+
 <script src="https://app.embed.im/snow.js" defer></script>
 
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
+
+<!-- Gitalk 评论 start  -->
+{% if site.gitalk.enable %}
+<!-- Gitalk link  -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+    <script type="text/javascript">
+    var gitalk = new Gitalk({
+    clientID: '{{site.gitalk.clientID}}',
+    clientSecret: '{{site.gitalk.clientSecret}}',
+    repo: '{{site.gitalk.repo}}',
+    owner: '{{site.gitalk.owner}}',
+    admin: ['{{site.gitalk.admin}}'],
+    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
+    id: 'about',
+    });
+    gitalk.render('gitalk-container');
+</script>
+{% endif %}
+<!-- Gitalk end -->
+
+ <!-- disqus 评论框 start  -->
+{% if site.disqus.enable %}
+
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus.username}}";
+    var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
 {% endif %}
 
