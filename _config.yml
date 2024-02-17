@@ -1,18 +1,18 @@
 # Site settings
 title: Rabbit_TJ Blog
 SEOTitle: 汤键的博客 | Rabbit_TJ Blog
-header-img: "https://pic.imgdb.cn/item/65cf393a9f345e8d0328c1d4.png"
+header-img: "https://pic.imgdb.cn/item/65d09b529f345e8d03336410.jpg"
 email: 1820291307@aliyun.com
 description: "All is but a retracing and reconstruction."
 keyword: "兔子队列, Rabbit_TJ Blog, 汤键的博客, 1820291307, 汤键, Apache, Java, Spring"
 url: "https://CGITJ.github.io"          # my host, for absolute URL
 baseurl: ""
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/CGITJ/CGITJ.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "站点统计<br>文章数：4篇<br>总字数：11162"
-sidebar-avatar: https://pic.imgdb.cn/item/65cf393a9f345e8d0328c193.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://pic.imgdb.cn/item/65d09b519f345e8d0333605e.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
