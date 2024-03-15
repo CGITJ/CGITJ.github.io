@@ -93,8 +93,6 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    {% include share-buttons.html %}
-                    <br>
                     <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
                     <script>
                         var now = new Date(); 
@@ -115,6 +113,8 @@
                     <br>
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                     <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+                    <br>
+                    {% include share-buttons.html %}
                 </p>
             </div>
         </div>
