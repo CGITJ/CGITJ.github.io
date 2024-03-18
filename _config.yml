@@ -12,7 +12,7 @@ github_repo: "https://github.com/CGITJ/CGITJ.github.io" # you code repository
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "站点统计<br>文章数：8篇<br>总字数：19620"
-sidebar-avatar: https://pic.imgdb.cn/item/65d09b519f345e8d0333605e.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://pic.imgdb.cn/item/65f853149f345e8d030ed4fe.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
